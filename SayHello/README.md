@@ -3,16 +3,13 @@
 As per usual you can simply copy the files in the **DiskImg** directory onto a formatted SD card and place in Pi3 or Pi4 to test
 
 [Details:](https://github.com/LdB-ECM/Docs_and_Images/blob/master/Documentation/COMPILING%20AARCH64%20CODE.md)  on how to compile AARCH64 baremetal if you need
->
->
-This code will simply kick the screen into 800x600 with 32 bit colour depth, fill the screen blue and put up two lines of text ("Hello World", "The End").
+>This code will simply kick the screen into 800x600 with 32 bit colour depth, fill the screen blue and put up two lines of text ("Hello World", "The End").
 >
 There are a number of important files to discuss
 >
 [BOOTSTUB (start64.S):](start64.S)
 >
 >​	The bootstub file is where Core0 will be delivered to start execution of our baremetal program. The entry point in AARCH64 is normally 0x80000 with the Core in EL2 mode. This can be varied in several ways by CONFIG.TXT on the SD Card but is outside discussion here.
->
 >
 >
 >​	The initial code will do some basic things with Core0 setting EL1 to 64Bits and bringing the FPU online before dropping the core down to run in EL1 mode. EL1 is the normal level for a general OS to run and again we wont discuss that further here. 
