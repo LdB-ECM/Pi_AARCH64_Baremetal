@@ -21,7 +21,7 @@ As per usual you can simply copy the files in the **DiskImg** directory onto a f
 >
 >
 >
->​	Next it runs a small autodetect check on address 0x3F3000FC which is the SD Card Vendor ID if that value is not 0x9902xxxx it knows we must be on a Pi4. That detection sequence will the set a global value provided on the interface called **Pi_Peripheral_Addr** which is the address of the peripherals it will be 0x3F000000 on a Pi3 and 0xFE000000 on a Pi4.
+>​	Next it runs a small autodetect check on address 0x3F3000FC which is the SD Card Vendor ID if that value is not 0x9902xxxx it knows we must be on a Pi4. That detection sequence will set a global value provided on the interface called **Pi_Peripheral_Addr** which is the address of the peripherals, it will be 0x3F000000 on a Pi3 and 0xFE000000 on a Pi4.
 >
 > 
 >
