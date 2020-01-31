@@ -7,9 +7,9 @@ As per usual you can simply copy the files in the **DiskImg** directory onto a f
 >
 This code will simply kick the screen into 800x600 with 32 bit colour depth, fill the screen blue and put up two lines of text ("Hello World", "The End").
 >
->There are a number of important files to discuss
+There are a number of important files to discuss
 >
->[BOOTSTUB (start64.S):](start64.S)
+[BOOTSTUB (start64.S):](start64.S)
 >
 >​	The bootstub file is where Core0 will be delivered to start execution of our baremetal program. The entry point in AARCH64 is normally 0x80000 with the Core in EL2 mode. This can be varied in several ways by CONFIG.TXT on the SD Card but is outside discussion here.
 >
@@ -31,13 +31,13 @@ This code will simply kick the screen into 800x600 with 32 bit colour depth, fil
 >
 >
 
->[LINKER DIRECTIVE (rpi64.ld):](rpi64.ld).
+[LINKER DIRECTIVE (rpi64.ld):](rpi64.ld).
 >
 >   The linker directive file organizes where things are placed at the link stage and it puts some special labels we may need. It will make what is the typical loading pattern for the ARM CPU. It starts by placing all executable code in a section called .TEXT which starts at 0x80000. Next follows all the constant data in a section called .RODATA . Then follows all static data in a section called .DATA. The BSS section we cleared at startup follows behind that and finally all the memory not used is defined into a .HEAP section
 
 
 
->[C CODE FILE START (main.c):](main.c).
+[C CODE FILE START (main.c):](main.c).
 >
 >   In the sample main.c code the code starts by calling InitGraph with the screen settings desired as provided 800 x 600 with 32 bit colour depth. You may change the X and Y resolution as required but you must stay in 32 bit colour mode simply because the primitives I provided are only 32 Bit colour depth they won't work on a different depth.  For Text a bitmap font is required which is defined in Font16x8.h and included at top of main.c. The program then clears the screen blue  before writing the two messages on screen and then dead looping.
 >
