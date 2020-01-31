@@ -3,9 +3,7 @@
 As per usual you can simply copy the files in the **DiskImg** directory onto a formatted SD card and place in Pi3 or Pi4 to test
 
 [Details:](https://github.com/LdB-ECM/Docs_and_Images/blob/master/Documentation/COMPILING%20AARCH64%20CODE.md)  on how to compile AARCH64 baremetal if you need
-
-
-
+>
 >
 >This code will simply kick the screen into 800x600 with 32 bit colour depth, fill the screen blue and put up two lines of text ("Hello World", "The End").
 >
