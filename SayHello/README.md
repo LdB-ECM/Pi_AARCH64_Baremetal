@@ -11,7 +11,7 @@ As per usual you can simply copy the files in the **DiskImg** directory onto a f
 >
 >There are a number of important files to discuss
 >
->[BOOTSTUB (Start64.S):](Start64.S)
+>[BOOTSTUB (start64.S):](start64.S)
 >
 >​	The bootstub file is where Core0 will be delivered to start execution of our baremetal program. The entry point in AARCH64 is normally 0x80000 with the Core in EL2 mode. This can be varied in several ways by CONFIG.TXT on the SD Card but is outside discussion here.
 >
